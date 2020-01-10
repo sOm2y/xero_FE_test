@@ -8,7 +8,9 @@ beforeEach(() => {
 
 describe('Invoice class', () => {
 	it('should call constructor', () => {
-		expect(invoiceMock.InvoiceNumber).toBe('N001')
+		expect(invoiceMock).toHaveProperty('InvoiceNumber', 'N001')
+		expect(invoiceMock).toHaveProperty('InvoiceDate')
+		expect(invoiceMock).toHaveProperty('LineItems')
 		expect(invoiceMock.LineItems).toHaveLength(0)
 	})
 
