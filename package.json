@@ -1,0 +1,14 @@
+{
+  "name": "fed_xerotechnicaltest",
+  "version": "1.0.0",
+  "description": "XeroTechnicalTest consists of a Node.js console application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Yue Yin",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
