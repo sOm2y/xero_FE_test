@@ -7,7 +7,7 @@ class Invoice {
 	
 	/**
 	 * Adds a line to invoice
-	 * @param {Object} InvoiceLine - a line to add
+	 * @param {Object} LineItems - a line to add
 	 */
 	AddInvoiceLine(line) {
 		this.LineItems.push(line)
@@ -38,12 +38,13 @@ class Invoice {
 	 * @param {Invoice} invoice
 	 */
 	MergeInvoices(invoice) {
+		//TODO: need to check duplicate invoices
 		this.SetLineItems([...this.LineItems, ...invoice.LineItems])
 	}
 
 	/**
 	 * Clone invoices
-	 * @return {Invoice} invoice
+	 * @return {Invoice}
 	 */
 	Clone() {
 		return Object.assign(Object.create(Object.getPrototypeOf(this)), this)
@@ -51,10 +52,10 @@ class Invoice {
 
 	/**
 	 * Set LineItems invoices
-	 * @param {LineItems} lineItems
+	 * @param {Object} LineItems
 	 */
-	SetLineItems(lineItems) {
-		this.LineItems = lineItems
+	SetLineItems(LineItems) {
+		this.LineItems = LineItems
 	}
 
 }
